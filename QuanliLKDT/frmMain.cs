@@ -36,6 +36,13 @@ namespace QuanliLKDT
             f.MdiParent = this;
             f.Show();
         }
+
+        private void barbtnProviders_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmSupplier f = new frmSupplier();
+            f.MdiParent = this;
+            f.Show();
+        }
     }
 }
 

@@ -109,6 +109,7 @@
             this.barbtnProviders.Id = 13;
             this.barbtnProviders.ImageOptions.LargeImageIndex = 3;
             this.barbtnProviders.Name = "barbtnProviders";
+            this.barbtnProviders.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barbtnProviders_ItemClick);
             // 
             // imageCollection1
             // 
