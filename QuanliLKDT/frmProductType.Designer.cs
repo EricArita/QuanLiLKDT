@@ -174,6 +174,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtCodeType);
             this.Name = "frmProductType";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lí loại sản phẩm";
             this.Load += new System.EventHandler(this.frmProductType_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();

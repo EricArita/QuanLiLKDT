@@ -13,11 +13,25 @@ namespace DAL
 {
     public class Connection
     {
+        private static volatile Connection instance;
+
+        private Connection() { }
+
+        public static Connection Instance {
+            get {
+                if (instance == null)
+                    instance = new Connection();
+                    
+                return instance;
+            }
+        }
+
         SqlConnection conn;
         SqlDataAdapter adapter;
         SqlCommand cmd;
         string path_connect = @"Data Source=DESKTOP-RNV8JUS\SQLEXPRESS;Initial Catalog=QLLinhKienDT;Integrated Security=True";
         DataSet ds = new DataSet();
+
 
         public DataSet getData(string sql)
         {
@@ -26,6 +40,7 @@ namespace DAL
                 conn = new SqlConnection(path_connect);
                 conn.Open();
                 adapter = new SqlDataAdapter(sql, conn);
+                ds = new DataSet();
                 adapter.Fill(ds, sql);
                 conn.Close();
                 return ds;

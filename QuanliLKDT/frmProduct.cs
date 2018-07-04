@@ -48,6 +48,7 @@ namespace QuanliLKDT
             enable_button(0);
 
             server = new LogicProduct();
+      
             DataSet dataset = server.getDataBase("SanPham");
             dataGridView.DataSource = dataset.Tables[0];
             dataGridView.Columns[0].HeaderText = "Mã sản phẩm";
@@ -57,6 +58,7 @@ namespace QuanliLKDT
             dataGridView.Columns[4].HeaderText = "Giá nhập";
             dataGridView.Columns[5].HeaderText = "Giá bán";
             dataGridView.Columns[6].HeaderText = "Đơn vị tính";
+            dataGridView.Columns[3].Width = 145;
             dataGridView.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridView.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridView.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -109,13 +111,14 @@ namespace QuanliLKDT
                 client = new ObjProduct(txtCodeProduct.Text, txtCodeType.Text, txtCodeProvider.Text, txtNameProduct.Text, txtImportPrice.Text, txtSalePrice.Text, txtUnit.Text);
                 server = new LogicProduct();
                 DataSet dataset_Check = server.getDataBase(client);
+ 
                 if (dataset_Check.Tables[0].Rows.Count > 0)
                     MessageBox.Show("Sản phẩm này đã tồn tại trong danh sách", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 else
                 {
                     server.setDataBase(client, button);
                     dataset_Check = server.getDataBase("SanPham");
-                    dataGridView.DataSource = dataset_Check.Tables[1];
+                    dataGridView.DataSource = dataset_Check.Tables[0];
                 }
 
                 enable_button(0);
@@ -138,7 +141,7 @@ namespace QuanliLKDT
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            DialogResult res = MessageBox.Show("Bạn có chắc muón thoát?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult res = MessageBox.Show("Bạn có chắc muốn thoát?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (res == DialogResult.Yes)
                 this.Close();
         }

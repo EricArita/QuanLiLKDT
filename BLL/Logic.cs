@@ -12,11 +12,9 @@ namespace BLL
 {
     public class Logic
     {
-        protected Connection connect = new Connection();
-
         public DataSet getDataBase(string TableName)
         {
-            return connect.getData("SELECT * FROM " + TableName);
+            return Connection.Instance.getData("SELECT * FROM " + TableName);
         }
 
     }

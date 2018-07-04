@@ -18,14 +18,14 @@ namespace BLL
 
         public DataSet getDataBase(ObjSupplier client)
         {
-            return connect.getData("SELECT * FROM" + nameOfTable + "WHERE MaNguon = '" + client.Codesupplier + "'");
+            return Connection.Instance.getData("SELECT * FROM" + nameOfTable + "WHERE MaNguon = '" + client.Codesupplier + "'");
         }
 
         public void setDataBase(ObjSupplier client, string button)
         {
             if (button == "Add")
             {
-                bool ok = connect.setData("INSERT INTO" + nameOfTable + "VALUES('" + client.Codesupplier + "', N'" + client.Name +  "', N'" + client.Note + "');");
+                bool ok = Connection.Instance.setData("INSERT INTO" + nameOfTable + "VALUES('" + client.Codesupplier + "', N'" + client.Name +  "', N'" + client.Note + "');");
 
                 if (ok)
                     MessageBox.Show("Thêm thông tin thành công", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -36,14 +36,14 @@ namespace BLL
 
             if (button == "Delete")
             {
-                connect.setData("DELETE FROM" + nameOfTable + "WHERE MaNguon = '" + client.Codesupplier + "'");
+                Connection.Instance.setData("DELETE FROM" + nameOfTable + "WHERE MaNguon = '" + client.Codesupplier + "'");
                 return;
             }
         }
 
         public void editDataBase(ObjSupplier client_initial, ObjSupplier client_edited)
         {
-            connect.setData("UPDATE" + nameOfTable + "SET MaNguon = '" + client_edited.Codesupplier + "', TenNguon = N'" + client_edited.Name + "', GhiChu = N'" + client_edited.Note + "' WHERE MaNguon = '" + client_initial.Codesupplier + "';");
+            Connection.Instance.setData("UPDATE" + nameOfTable + "SET MaNguon = '" + client_edited.Codesupplier + "', TenNguon = N'" + client_edited.Name + "', GhiChu = N'" + client_edited.Note + "' WHERE MaNguon = '" + client_initial.Codesupplier + "';");
             return;
         }
     }

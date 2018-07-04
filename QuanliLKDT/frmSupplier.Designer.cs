@@ -198,6 +198,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtCodeSupplier);
             this.Name = "frmSupplier";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nhà cung cấp";
             this.Load += new System.EventHandler(this.frmSupplier_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();

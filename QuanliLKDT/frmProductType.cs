@@ -110,7 +110,7 @@ namespace QuanliLKDT
                 {
                     server.setDataBase(client, button);
                     dataset_Check = server.getDataBase("LoaiSP");
-                    dataGridView.DataSource = dataset_Check.Tables[1];
+                    dataGridView.DataSource = dataset_Check.Tables[0];
                 }
 
                 enable_button(0);
@@ -133,7 +133,7 @@ namespace QuanliLKDT
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            DialogResult res = MessageBox.Show("Bạn có chắc muón thoát?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult res = MessageBox.Show("Bạn có chắc muốn thoát?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (res == DialogResult.Yes)
                 this.Close();
         }
