@@ -62,7 +62,7 @@
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(221, 20);
-            this.txtName.TabIndex = 33;
+            this.txtName.TabIndex = 1;
             // 
             // dataGridView
             // 
@@ -72,7 +72,8 @@
             this.dataGridView.Location = new System.Drawing.Point(11, 12);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.Size = new System.Drawing.Size(745, 454);
-            this.dataGridView.TabIndex = 32;
+            this.dataGridView.TabIndex = 0;
+            this.dataGridView.TabStop = false;
             this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
             // 
             // label1
@@ -93,7 +94,7 @@
             this.txtCodeSupplier.Multiline = true;
             this.txtCodeSupplier.Name = "txtCodeSupplier";
             this.txtCodeSupplier.Size = new System.Drawing.Size(221, 20);
-            this.txtCodeSupplier.TabIndex = 30;
+            this.txtCodeSupplier.TabIndex = 0;
             // 
             // btnDelete
             // 
@@ -104,7 +105,7 @@
             this.btnDelete.Location = new System.Drawing.Point(762, 189);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(150, 23);
-            this.btnDelete.TabIndex = 39;
+            this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -117,7 +118,7 @@
             this.btnUpdate.Location = new System.Drawing.Point(924, 189);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(147, 23);
-            this.btnUpdate.TabIndex = 38;
+            this.btnUpdate.TabIndex = 6;
             this.btnUpdate.Text = "Cập nhật";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
@@ -130,7 +131,7 @@
             this.btnCancel.Location = new System.Drawing.Point(762, 231);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(309, 23);
-            this.btnCancel.TabIndex = 37;
+            this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "Đóng";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -143,7 +144,7 @@
             this.btnEdit.Location = new System.Drawing.Point(924, 141);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(147, 23);
-            this.btnEdit.TabIndex = 36;
+            this.btnEdit.TabIndex = 4;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
@@ -156,7 +157,7 @@
             this.btnAdd.Location = new System.Drawing.Point(762, 141);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(150, 23);
-            this.btnAdd.TabIndex = 35;
+            this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -167,7 +168,7 @@
             this.txtNote.Multiline = true;
             this.txtNote.Name = "txtNote";
             this.txtNote.Size = new System.Drawing.Size(221, 20);
-            this.txtNote.TabIndex = 42;
+            this.txtNote.TabIndex = 2;
             // 
             // label4
             // 
@@ -197,6 +198,7 @@
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtCodeSupplier);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmSupplier";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nhà cung cấp";

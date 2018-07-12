@@ -70,7 +70,8 @@
             this.dataGridView.Location = new System.Drawing.Point(12, 12);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.Size = new System.Drawing.Size(745, 454);
-            this.dataGridView.TabIndex = 2;
+            this.dataGridView.TabIndex = 0;
+            this.dataGridView.TabStop = false;
             this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
             // 
             // txtNameType
@@ -80,7 +81,7 @@
             this.txtNameType.Multiline = true;
             this.txtNameType.Name = "txtNameType";
             this.txtNameType.Size = new System.Drawing.Size(233, 20);
-            this.txtNameType.TabIndex = 3;
+            this.txtNameType.TabIndex = 1;
             // 
             // label2
             // 
@@ -102,7 +103,7 @@
             this.btnAdd.Location = new System.Drawing.Point(769, 107);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(150, 23);
-            this.btnAdd.TabIndex = 5;
+            this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -115,7 +116,7 @@
             this.btnEdit.Location = new System.Drawing.Point(925, 107);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(147, 23);
-            this.btnEdit.TabIndex = 6;
+            this.btnEdit.TabIndex = 3;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
@@ -128,7 +129,7 @@
             this.btnCancel.Location = new System.Drawing.Point(769, 188);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(306, 23);
-            this.btnCancel.TabIndex = 7;
+            this.btnCancel.TabIndex = 6;
             this.btnCancel.Text = "Đóng";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -141,7 +142,7 @@
             this.btnUpdate.Location = new System.Drawing.Point(925, 147);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(150, 23);
-            this.btnUpdate.TabIndex = 8;
+            this.btnUpdate.TabIndex = 5;
             this.btnUpdate.Text = "Cập nhật";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
@@ -154,7 +155,7 @@
             this.btnDelete.Location = new System.Drawing.Point(769, 147);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(150, 23);
-            this.btnDelete.TabIndex = 9;
+            this.btnDelete.TabIndex = 4;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -173,6 +174,7 @@
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtCodeType);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmProductType";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lí loại sản phẩm";

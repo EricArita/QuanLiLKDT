@@ -35,14 +35,14 @@
             this.barbtnProductType = new DevExpress.XtraBars.BarButtonItem();
             this.barbtnCustomer = new DevExpress.XtraBars.BarButtonItem();
             this.barbtnProviders = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
+            this.barbtnImport = new DevExpress.XtraBars.BarButtonItem();
+            this.barbtnSale = new DevExpress.XtraBars.BarButtonItem();
+            this.barbtnStatistics = new DevExpress.XtraBars.BarButtonItem();
+            this.barbtnFinacialReport = new DevExpress.XtraBars.BarButtonItem();
+            this.barbtnImportReport = new DevExpress.XtraBars.BarButtonItem();
+            this.barbtnSaleReport = new DevExpress.XtraBars.BarButtonItem();
+            this.barbtnStaffReport = new DevExpress.XtraBars.BarButtonItem();
+            this.barbtnManageReceipt = new DevExpress.XtraBars.BarButtonItem();
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -57,8 +57,10 @@
             this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.xtraTabControl_Function = new DevExpress.XtraTab.XtraTabControl();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl_Function)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl1
@@ -70,14 +72,14 @@
             this.barbtnProductType,
             this.barbtnCustomer,
             this.barbtnProviders,
-            this.barButtonItem1,
-            this.barButtonItem2,
-            this.barButtonItem3,
-            this.barButtonItem4,
-            this.barButtonItem5,
-            this.barButtonItem6,
-            this.barButtonItem7,
-            this.barButtonItem8});
+            this.barbtnImport,
+            this.barbtnSale,
+            this.barbtnStatistics,
+            this.barbtnFinacialReport,
+            this.barbtnImportReport,
+            this.barbtnSaleReport,
+            this.barbtnStaffReport,
+            this.barbtnManageReceipt});
             this.ribbonControl1.LargeImages = this.imageCollection1;
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.MaxItemId = 24;
@@ -125,61 +127,62 @@
             this.barbtnProviders.Name = "barbtnProviders";
             this.barbtnProviders.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barbtnProviders_ItemClick);
             // 
-            // barButtonItem1
+            // barbtnImport
             // 
-            this.barButtonItem1.Caption = "Nhập hàng";
-            this.barButtonItem1.Id = 14;
-            this.barButtonItem1.ImageOptions.LargeImageIndex = 4;
-            this.barButtonItem1.Name = "barButtonItem1";
+            this.barbtnImport.Caption = "Nhập hàng";
+            this.barbtnImport.Id = 14;
+            this.barbtnImport.ImageOptions.LargeImageIndex = 4;
+            this.barbtnImport.Name = "barbtnImport";
+            this.barbtnImport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barbtnImport_ItemClick);
             // 
-            // barButtonItem2
+            // barbtnSale
             // 
-            this.barButtonItem2.Caption = "Bán hàng";
-            this.barButtonItem2.Id = 15;
-            this.barButtonItem2.ImageOptions.LargeImageIndex = 5;
-            this.barButtonItem2.Name = "barButtonItem2";
+            this.barbtnSale.Caption = "Bán hàng";
+            this.barbtnSale.Id = 15;
+            this.barbtnSale.ImageOptions.LargeImageIndex = 5;
+            this.barbtnSale.Name = "barbtnSale";
             // 
-            // barButtonItem3
+            // barbtnStatistics
             // 
-            this.barButtonItem3.Caption = "Thống kê";
-            this.barButtonItem3.Id = 16;
-            this.barButtonItem3.ImageOptions.LargeImageIndex = 6;
-            this.barButtonItem3.Name = "barButtonItem3";
+            this.barbtnStatistics.Caption = "Thống kê";
+            this.barbtnStatistics.Id = 16;
+            this.barbtnStatistics.ImageOptions.LargeImageIndex = 6;
+            this.barbtnStatistics.Name = "barbtnStatistics";
             // 
-            // barButtonItem4
+            // barbtnFinacialReport
             // 
-            this.barButtonItem4.Caption = "Báo cáo doanh thu";
-            this.barButtonItem4.Id = 17;
-            this.barButtonItem4.ImageOptions.LargeImageIndex = 11;
-            this.barButtonItem4.Name = "barButtonItem4";
+            this.barbtnFinacialReport.Caption = "Báo cáo doanh thu";
+            this.barbtnFinacialReport.Id = 17;
+            this.barbtnFinacialReport.ImageOptions.LargeImageIndex = 11;
+            this.barbtnFinacialReport.Name = "barbtnFinacialReport";
             // 
-            // barButtonItem5
+            // barbtnImportReport
             // 
-            this.barButtonItem5.Caption = "Báo cáo sản phẩm nhập";
-            this.barButtonItem5.Id = 18;
-            this.barButtonItem5.ImageOptions.LargeImageIndex = 8;
-            this.barButtonItem5.Name = "barButtonItem5";
+            this.barbtnImportReport.Caption = "Báo cáo sản phẩm nhập";
+            this.barbtnImportReport.Id = 18;
+            this.barbtnImportReport.ImageOptions.LargeImageIndex = 8;
+            this.barbtnImportReport.Name = "barbtnImportReport";
             // 
-            // barButtonItem6
+            // barbtnSaleReport
             // 
-            this.barButtonItem6.Caption = "Báo cáo sản phẩm bán";
-            this.barButtonItem6.Id = 19;
-            this.barButtonItem6.ImageOptions.LargeImageIndex = 9;
-            this.barButtonItem6.Name = "barButtonItem6";
+            this.barbtnSaleReport.Caption = "Báo cáo sản phẩm bán";
+            this.barbtnSaleReport.Id = 19;
+            this.barbtnSaleReport.ImageOptions.LargeImageIndex = 9;
+            this.barbtnSaleReport.Name = "barbtnSaleReport";
             // 
-            // barButtonItem7
+            // barbtnStaffReport
             // 
-            this.barButtonItem7.Caption = "Báo cáo nhân viên";
-            this.barButtonItem7.Id = 20;
-            this.barButtonItem7.ImageOptions.LargeImageIndex = 7;
-            this.barButtonItem7.Name = "barButtonItem7";
+            this.barbtnStaffReport.Caption = "Báo cáo nhân viên";
+            this.barbtnStaffReport.Id = 20;
+            this.barbtnStaffReport.ImageOptions.LargeImageIndex = 7;
+            this.barbtnStaffReport.Name = "barbtnStaffReport";
             // 
-            // barButtonItem8
+            // barbtnManageReceipt
             // 
-            this.barButtonItem8.Caption = "Quản lí hóa đơn";
-            this.barButtonItem8.Id = 21;
-            this.barButtonItem8.ImageOptions.LargeImageIndex = 10;
-            this.barButtonItem8.Name = "barButtonItem8";
+            this.barbtnManageReceipt.Caption = "Quản lí hóa đơn";
+            this.barbtnManageReceipt.Id = 21;
+            this.barbtnManageReceipt.ImageOptions.LargeImageIndex = 10;
+            this.barbtnManageReceipt.Name = "barbtnManageReceipt";
             // 
             // imageCollection1
             // 
@@ -237,24 +240,24 @@
             // 
             // ribbonPageGroup3
             // 
-            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem1);
-            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem2);
+            this.ribbonPageGroup3.ItemLinks.Add(this.barbtnImport);
+            this.ribbonPageGroup3.ItemLinks.Add(this.barbtnSale);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "Giao dịch";
             // 
             // ribbonPageGroup6
             // 
-            this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem3);
-            this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem4);
-            this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem5);
-            this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem6);
-            this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem7);
+            this.ribbonPageGroup6.ItemLinks.Add(this.barbtnStatistics);
+            this.ribbonPageGroup6.ItemLinks.Add(this.barbtnFinacialReport);
+            this.ribbonPageGroup6.ItemLinks.Add(this.barbtnImportReport);
+            this.ribbonPageGroup6.ItemLinks.Add(this.barbtnSaleReport);
+            this.ribbonPageGroup6.ItemLinks.Add(this.barbtnStaffReport);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             this.ribbonPageGroup6.Text = "Thống kê - Báo cáo";
             // 
             // ribbonPageGroup7
             // 
-            this.ribbonPageGroup7.ItemLinks.Add(this.barButtonItem8);
+            this.ribbonPageGroup7.ItemLinks.Add(this.barbtnManageReceipt);
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
             this.ribbonPageGroup7.Text = "Hóa đơn";
             // 
@@ -287,12 +290,24 @@
             this.ribbonPage3.Name = "ribbonPage3";
             this.ribbonPage3.Text = "ribbonPage3";
             // 
+            // xtraTabControl_Function
+            // 
+            this.xtraTabControl_Function.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InAllTabPageHeaders;
+            this.xtraTabControl_Function.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xtraTabControl_Function.Location = new System.Drawing.Point(0, 143);
+            this.xtraTabControl_Function.Name = "xtraTabControl_Function";
+            this.xtraTabControl_Function.Size = new System.Drawing.Size(1149, 525);
+            this.xtraTabControl_Function.TabIndex = 5;
+            this.xtraTabControl_Function.Visible = false;
+            this.xtraTabControl_Function.CloseButtonClick += new System.EventHandler(this.xtraTabControl_Function_CloseButtonClick);
+            // 
             // frmMain
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1149, 668);
+            this.Controls.Add(this.xtraTabControl_Function);
             this.Controls.Add(this.ribbonControl1);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
             this.IsMdiContainer = true;
@@ -300,8 +315,10 @@
             this.Ribbon = this.ribbonControl1;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.SizeChanged += new System.EventHandler(this.frmMain_SizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl_Function)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -326,16 +343,17 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage5;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem5;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem6;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem7;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem8;
+        private DevExpress.XtraBars.BarButtonItem barbtnImport;
+        private DevExpress.XtraBars.BarButtonItem barbtnSale;
+        private DevExpress.XtraBars.BarButtonItem barbtnStatistics;
+        private DevExpress.XtraBars.BarButtonItem barbtnFinacialReport;
+        private DevExpress.XtraBars.BarButtonItem barbtnImportReport;
+        private DevExpress.XtraBars.BarButtonItem barbtnSaleReport;
+        private DevExpress.XtraBars.BarButtonItem barbtnStaffReport;
+        private DevExpress.XtraBars.BarButtonItem barbtnManageReceipt;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
+        public DevExpress.XtraTab.XtraTabControl xtraTabControl_Function;
     }
 }
 

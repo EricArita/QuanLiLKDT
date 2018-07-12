@@ -64,7 +64,7 @@
             this.txtPhone.Multiline = true;
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(185, 20);
-            this.txtPhone.TabIndex = 42;
+            this.txtPhone.TabIndex = 2;
             // 
             // label3
             // 
@@ -84,7 +84,7 @@
             this.txtNote.Multiline = true;
             this.txtNote.Name = "txtNote";
             this.txtNote.Size = new System.Drawing.Size(185, 20);
-            this.txtNote.TabIndex = 40;
+            this.txtNote.TabIndex = 3;
             // 
             // btnDelete
             // 
@@ -95,7 +95,7 @@
             this.btnDelete.Location = new System.Drawing.Point(759, 229);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(150, 23);
-            this.btnDelete.TabIndex = 39;
+            this.btnDelete.TabIndex = 6;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -108,7 +108,7 @@
             this.btnUpdate.Location = new System.Drawing.Point(921, 229);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(150, 23);
-            this.btnUpdate.TabIndex = 38;
+            this.btnUpdate.TabIndex = 7;
             this.btnUpdate.Text = "Cập nhật";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
@@ -121,7 +121,7 @@
             this.btnEdit.Location = new System.Drawing.Point(921, 183);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(147, 23);
-            this.btnEdit.TabIndex = 36;
+            this.btnEdit.TabIndex = 5;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
@@ -134,7 +134,7 @@
             this.btnAdd.Location = new System.Drawing.Point(759, 183);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(150, 23);
-            this.btnAdd.TabIndex = 35;
+            this.btnAdd.TabIndex = 4;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -156,7 +156,7 @@
             this.txtNameCustomer.Multiline = true;
             this.txtNameCustomer.Name = "txtNameCustomer";
             this.txtNameCustomer.Size = new System.Drawing.Size(185, 20);
-            this.txtNameCustomer.TabIndex = 33;
+            this.txtNameCustomer.TabIndex = 1;
             // 
             // dataGridView
             // 
@@ -166,7 +166,8 @@
             this.dataGridView.Location = new System.Drawing.Point(11, 12);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.Size = new System.Drawing.Size(742, 454);
-            this.dataGridView.TabIndex = 32;
+            this.dataGridView.TabIndex = 0;
+            this.dataGridView.TabStop = false;
             this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
             // 
             // label1
@@ -187,7 +188,7 @@
             this.txtCodeCustomer.Multiline = true;
             this.txtCodeCustomer.Name = "txtCodeCustomer";
             this.txtCodeCustomer.Size = new System.Drawing.Size(185, 20);
-            this.txtCodeCustomer.TabIndex = 30;
+            this.txtCodeCustomer.TabIndex = 0;
             // 
             // btnCancel
             // 
@@ -198,7 +199,7 @@
             this.btnCancel.Location = new System.Drawing.Point(759, 275);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(312, 23);
-            this.btnCancel.TabIndex = 44;
+            this.btnCancel.TabIndex = 8;
             this.btnCancel.Text = "Đóng";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -206,6 +207,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1081, 483);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.label4);
@@ -221,6 +223,7 @@
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtCodeCustomer);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lí khách hàng";

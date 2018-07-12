@@ -61,7 +61,7 @@
             this.btnDelete.Location = new System.Drawing.Point(762, 361);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(150, 23);
-            this.btnDelete.TabIndex = 19;
+            this.btnDelete.TabIndex = 9;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -74,7 +74,7 @@
             this.btnUpdate.Location = new System.Drawing.Point(921, 361);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(150, 23);
-            this.btnUpdate.TabIndex = 18;
+            this.btnUpdate.TabIndex = 10;
             this.btnUpdate.Text = "Cập nhật";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
@@ -87,7 +87,7 @@
             this.btnCancel.Location = new System.Drawing.Point(762, 402);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(309, 23);
-            this.btnCancel.TabIndex = 17;
+            this.btnCancel.TabIndex = 11;
             this.btnCancel.Text = "Đóng";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -100,7 +100,7 @@
             this.btnEdit.Location = new System.Drawing.Point(924, 318);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(147, 23);
-            this.btnEdit.TabIndex = 16;
+            this.btnEdit.TabIndex = 8;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
@@ -113,7 +113,7 @@
             this.btnAdd.Location = new System.Drawing.Point(762, 318);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(150, 23);
-            this.btnAdd.TabIndex = 15;
+            this.btnAdd.TabIndex = 7;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -135,7 +135,7 @@
             this.txtCodeType.Multiline = true;
             this.txtCodeType.Name = "txtCodeType";
             this.txtCodeType.Size = new System.Drawing.Size(202, 20);
-            this.txtCodeType.TabIndex = 13;
+            this.txtCodeType.TabIndex = 1;
             // 
             // dataGridView
             // 
@@ -145,7 +145,8 @@
             this.dataGridView.Location = new System.Drawing.Point(11, 12);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.Size = new System.Drawing.Size(745, 454);
-            this.dataGridView.TabIndex = 12;
+            this.dataGridView.TabIndex = 0;
+            this.dataGridView.TabStop = false;
             this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
             // 
             // label1
@@ -166,7 +167,7 @@
             this.txtCodeProduct.Multiline = true;
             this.txtCodeProduct.Name = "txtCodeProduct";
             this.txtCodeProduct.Size = new System.Drawing.Size(202, 20);
-            this.txtCodeProduct.TabIndex = 10;
+            this.txtCodeProduct.TabIndex = 0;
             // 
             // label3
             // 
@@ -186,7 +187,7 @@
             this.txtNameProduct.Multiline = true;
             this.txtNameProduct.Name = "txtNameProduct";
             this.txtNameProduct.Size = new System.Drawing.Size(202, 20);
-            this.txtNameProduct.TabIndex = 20;
+            this.txtNameProduct.TabIndex = 3;
             // 
             // label4
             // 
@@ -206,7 +207,7 @@
             this.txtCodeProvider.Multiline = true;
             this.txtCodeProvider.Name = "txtCodeProvider";
             this.txtCodeProvider.Size = new System.Drawing.Size(202, 20);
-            this.txtCodeProvider.TabIndex = 22;
+            this.txtCodeProvider.TabIndex = 2;
             // 
             // label5
             // 
@@ -226,7 +227,7 @@
             this.txtImportPrice.Multiline = true;
             this.txtImportPrice.Name = "txtImportPrice";
             this.txtImportPrice.Size = new System.Drawing.Size(202, 20);
-            this.txtImportPrice.TabIndex = 24;
+            this.txtImportPrice.TabIndex = 4;
             // 
             // label6
             // 
@@ -246,7 +247,7 @@
             this.txtSalePrice.Multiline = true;
             this.txtSalePrice.Name = "txtSalePrice";
             this.txtSalePrice.Size = new System.Drawing.Size(202, 20);
-            this.txtSalePrice.TabIndex = 26;
+            this.txtSalePrice.TabIndex = 5;
             // 
             // label7
             // 
@@ -266,7 +267,7 @@
             this.txtUnit.Multiline = true;
             this.txtUnit.Name = "txtUnit";
             this.txtUnit.Size = new System.Drawing.Size(202, 20);
-            this.txtUnit.TabIndex = 28;
+            this.txtUnit.TabIndex = 6;
             // 
             // frmProduct
             // 
@@ -293,6 +294,7 @@
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtCodeProduct);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lí sản phẩm";

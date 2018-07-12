@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using DevExpress.XtraTab;
 using DTO;
 using BLL;
 
@@ -133,9 +134,29 @@ namespace QuanliLKDT
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            DialogResult res = MessageBox.Show("Bạn có chắc muốn thoát?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult res;
+
+            if (btnUpdate.Enabled == true)
+                res = MessageBox.Show("Bạn chưa cập nhật thông tin hiện tại. Bạn có chắc muốn thoát?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            else
+                res = MessageBox.Show("Bạn có chắc muốn thoát?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
             if (res == DialogResult.Yes)
+            {
                 this.Close();
+
+                foreach (frmMain f in Application.OpenForms)
+                {
+                    foreach (XtraTabPage tab in f.xtraTabControl_Function.TabPages)
+                    {
+                        if (tab.Name == this.Name)
+                        {
+                            f.xtraTabControl_Function.TabPages.Remove(tab);
+                            return;
+                        }
+                    }
+                }
+            }
         }
 
         private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
