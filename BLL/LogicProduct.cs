@@ -18,14 +18,14 @@ namespace BLL
 
         public DataSet getDataBase(ObjProduct client)
         {
-            return Connection.Instance.getData("SELECT * FROM" + nameOfTable +  "WHERE MaSP = '" + client.Codeproduct + "'");
+            return Connection.Instance.getData("SELECT * FROM" + nameOfTable +  "WHERE MaSP = '" + client.Productcode + "'");
         }
 
         public void setDataBase(ObjProduct client, string button)
         {
             if (button == "Add")
             {
-                bool ok = Connection.Instance.setData("INSERT INTO" + nameOfTable + "VALUES('" + client.Codeproduct + "', '" + client.Codetype + "', '" + client.Codeprovider + "', N'" + client.Name + "', " + client.Importprice + ", " + client.Saleprice + ", N'" + client.Unit + "');");              
+                bool ok = Connection.Instance.setData("INSERT INTO" + nameOfTable + "VALUES('" + client.Productcode + "', '" + client.Typecode + "', '" + client.Providercode + "', N'" + client.Name + "', " + client.Importprice + ", " + client.Saleprice + ", N'" + client.Unit + "');");              
      
                 if (ok)
                     MessageBox.Show("Thêm thông tin thành công", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -36,14 +36,14 @@ namespace BLL
 
             if (button == "Delete")
             {
-                Connection.Instance.setData("DELETE FROM" + nameOfTable + "WHERE MaSP = '" + client.Codeproduct + "'");
+                Connection.Instance.setData("DELETE FROM" + nameOfTable + "WHERE MaSP = '" + client.Productcode + "'");
                 return;
             }
         }
 
         public void editDataBase(ObjProduct client_initial, ObjProduct client_edited)
         {
-            Connection.Instance.setData("UPDATE" + nameOfTable + "SET MaSP = '" + client_edited.Codeproduct + "', MaLoai = '" + client_edited.Codetype + "', MaNguon = '" + client_edited.Codeprovider + "', TenSP = N'" + client_edited.Name + "', GiaNhap = " + client_edited.Importprice + ", " + "GiaBan = " + client_edited.Saleprice + ", DonViTinh = '" + client_edited.Unit + "' WHERE MaSP = '" + client_initial.Codeproduct + "';");
+            Connection.Instance.setData("UPDATE" + nameOfTable + "SET MaSP = '" + client_edited.Productcode + "', MaLoai = '" + client_edited.Typecode + "', MaNguon = '" + client_edited.Providercode + "', TenSP = N'" + client_edited.Name + "', GiaNhap = " + client_edited.Importprice + ", " + "GiaBan = " + client_edited.Saleprice + ", DonViTinh = '" + client_edited.Unit + "' WHERE MaSP = '" + client_initial.Productcode + "';");
             return;
         }
     }

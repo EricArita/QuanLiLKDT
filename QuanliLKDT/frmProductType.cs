@@ -26,21 +26,15 @@ namespace QuanliLKDT
         {
             if (stt == 0)
             {
-                btnAdd.Enabled = true;
-                btnEdit.Enabled = true;
-                btnDelete.Enabled = true;
+                btnAdd.Enabled = btnEdit.Enabled = btnDelete.Enabled = true;
                 btnUpdate.Enabled = false;
-                txtCodeType.Enabled = txtNameType.Enabled = false;
+                txtTypeCode.Enabled = txtTypeName.Enabled = false;
             }
             else
             {
-                btnAdd.Enabled = false;
-                btnEdit.Enabled = false;
-                btnDelete.Enabled = false;
-                btnUpdate.Enabled = true;
-                txtCodeType.Enabled = true;
-                txtNameType.Enabled = true;
-                txtCodeType.Enabled = txtNameType.Enabled = true;
+                btnAdd.Enabled = btnEdit.Enabled = btnDelete.Enabled = false;
+                btnUpdate.Enabled = true;              
+                txtTypeCode.Enabled = txtTypeName.Enabled = true;
             }
         }
 
@@ -72,7 +66,7 @@ namespace QuanliLKDT
         private void btnAdd_Click(object sender, EventArgs e)
         {
             enable_button(1);
-            txtCodeType.Text = txtNameType.Text = "";
+            txtTypeCode.Text = txtTypeName.Text = "";
             button = "Add";
         }
 
@@ -80,7 +74,7 @@ namespace QuanliLKDT
         {
             enable_button(1);
             button = "Edit";
-            client = new ObjProductType(txtCodeType.Text, txtNameType.Text);
+            client = new ObjProductType(txtTypeCode.Text, txtTypeName.Text);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -89,7 +83,7 @@ namespace QuanliLKDT
             button = "Delete";
             if (res == DialogResult.Yes)
             {
-                client = new ObjProductType(txtCodeType.Text, txtNameType.Text);
+                client = new ObjProductType(txtTypeCode.Text, txtTypeName.Text);
                 server = new LogicProductType();
                 server.setDataBase(client, button);
                 DataSet dataset_AfterDeleting = server.getDataBase("LoaiSP");
@@ -102,7 +96,7 @@ namespace QuanliLKDT
         {
             if (button == "Add")
             {
-                client = new ObjProductType(txtCodeType.Text, txtNameType.Text);
+                client = new ObjProductType(txtTypeCode.Text, txtTypeName.Text);
                 server = new LogicProductType();
                 DataSet dataset_Check = server.getDataBase(client);
                 if (dataset_Check.Tables[0].Rows.Count > 0)
@@ -121,7 +115,7 @@ namespace QuanliLKDT
 
             if (button == "Edit")
             {
-                client_edited = new ObjProductType(txtCodeType.Text, txtNameType.Text);
+                client_edited = new ObjProductType(txtTypeCode.Text, txtTypeName.Text);
                 server = new LogicProductType();
                 server.editDataBase(client, client_edited);
                 DataSet dataset_edit = server.getDataBase("LoaiSP");
@@ -161,8 +155,8 @@ namespace QuanliLKDT
 
         private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtCodeType.Text = dataGridView.CurrentRow.Cells[0].Value.ToString();
-            txtNameType.Text = dataGridView.CurrentRow.Cells[1].Value.ToString();
+            txtTypeCode.Text = dataGridView.CurrentRow.Cells[0].Value.ToString();
+            txtTypeName.Text = dataGridView.CurrentRow.Cells[1].Value.ToString();
         }
 
 

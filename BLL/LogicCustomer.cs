@@ -18,14 +18,14 @@ namespace BLL
 
         public DataSet getDataBase(ObjCustomer client)
         {
-            return Connection.Instance.getData("SELECT * FROM" + nameOfTable + "WHERE MaKhach = '" + client.Codecustomer + "'");
+            return Connection.Instance.getData("SELECT * FROM" + nameOfTable + "WHERE MaKhach = '" + client.Customercode + "'");
         }
 
         public void setDataBase(ObjCustomer client, string button)
         {
             if (button == "Add")
             {
-                bool ok = Connection.Instance.setData("INSERT INTO" + nameOfTable + "VALUES('" + client.Codecustomer + "', N'" + client.Name + "', '" + client.Phone + "', N'" + client.Note + "');");
+                bool ok = Connection.Instance.setData("INSERT INTO" + nameOfTable + "VALUES('" + client.Customercode + "', N'" + client.Name + "', '" + client.Phone + "', N'" + client.Note + "');");
 
                 if (ok)
                     MessageBox.Show("Thêm thông tin thành công", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -36,14 +36,14 @@ namespace BLL
 
             if (button == "Delete")
             {
-                Connection.Instance.setData("DELETE FROM" + nameOfTable + "WHERE MaKhach = '" + client.Codecustomer + "'");
+                Connection.Instance.setData("DELETE FROM" + nameOfTable + "WHERE MaKhach = '" + client.Customercode + "'");
                 return;
             }
         }
 
         public void editDataBase(ObjCustomer client_initial, ObjCustomer client_edited)
         {
-            Connection.Instance.setData("UPDATE" + nameOfTable + "SET MaKhach = '" + client_edited.Codecustomer + "', TenKhach = N'" + client_edited.Name + "', SoDT = '" + client_edited.Phone + "', GhiChu = N'" + client_edited.Note + "' WHERE MaKhach = '" + client_initial.Codecustomer + "';");
+            Connection.Instance.setData("UPDATE" + nameOfTable + "SET MaKhach = '" + client_edited.Customercode + "', TenKhach = N'" + client_edited.Name + "', SoDT = '" + client_edited.Phone + "', GhiChu = N'" + client_edited.Note + "' WHERE MaKhach = '" + client_initial.Customercode + "';");
             return;
         }
     }

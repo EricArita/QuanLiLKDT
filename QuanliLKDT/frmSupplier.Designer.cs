@@ -33,7 +33,7 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtCodeSupplier = new System.Windows.Forms.TextBox();
+            this.txtSupplierCode = new System.Windows.Forms.TextBox();
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
@@ -87,14 +87,14 @@
             this.label1.Text = "Mã nguồn";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtCodeSupplier
+            // txtSupplierCode
             // 
-            this.txtCodeSupplier.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCodeSupplier.Location = new System.Drawing.Point(853, 15);
-            this.txtCodeSupplier.Multiline = true;
-            this.txtCodeSupplier.Name = "txtCodeSupplier";
-            this.txtCodeSupplier.Size = new System.Drawing.Size(221, 20);
-            this.txtCodeSupplier.TabIndex = 0;
+            this.txtSupplierCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSupplierCode.Location = new System.Drawing.Point(853, 15);
+            this.txtSupplierCode.Multiline = true;
+            this.txtSupplierCode.Name = "txtSupplierCode";
+            this.txtSupplierCode.Size = new System.Drawing.Size(221, 20);
+            this.txtSupplierCode.TabIndex = 0;
             // 
             // btnDelete
             // 
@@ -197,7 +197,7 @@
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtCodeSupplier);
+            this.Controls.Add(this.txtSupplierCode);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmSupplier";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -219,7 +219,7 @@
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtCodeSupplier;
+        private System.Windows.Forms.TextBox txtSupplierCode;
         private System.Windows.Forms.TextBox txtNote;
         private System.Windows.Forms.Label label4;
     }

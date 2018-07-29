@@ -28,13 +28,13 @@ namespace QuanliLKDT
             {
                 btnAdd.Enabled = btnEdit.Enabled = btnDelete.Enabled = true;
                 btnUpdate.Enabled = false;
-                txtCodeSupplier.Enabled = txtName.Enabled = txtNote.Enabled = false;
+                txtSupplierCode.Enabled = txtName.Enabled = txtNote.Enabled = false;
             }
             else
             {
                 btnAdd.Enabled = btnEdit.Enabled = btnDelete.Enabled = false;
                 btnUpdate.Enabled = true;
-                txtCodeSupplier.Enabled = txtName.Enabled = txtNote.Enabled = true;
+                txtSupplierCode.Enabled = txtName.Enabled = txtNote.Enabled = true;
             }
         }
 
@@ -69,7 +69,7 @@ namespace QuanliLKDT
         private void btnAdd_Click(object sender, EventArgs e)
         {
             enable_button(1);
-            txtCodeSupplier.Text = txtName.Text = txtNote.Text = " ";
+            txtSupplierCode.Text = txtName.Text = txtNote.Text = "";
             button = "Add";
         }
 
@@ -77,7 +77,7 @@ namespace QuanliLKDT
         {
             enable_button(1);
             button = "Edit";
-            client = new ObjSupplier(txtCodeSupplier.Text, txtName.Text, txtNote.Text);
+            client = new ObjSupplier(txtSupplierCode.Text, txtName.Text, txtNote.Text);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -86,7 +86,7 @@ namespace QuanliLKDT
             button = "Delete";
             if (res == DialogResult.Yes)
             {
-                client = new ObjSupplier(txtCodeSupplier.Text, txtName.Text, txtNote.Text);
+                client = new ObjSupplier(txtSupplierCode.Text, txtName.Text, txtNote.Text);
                 server = new LogicSupplier();
                 server.setDataBase(client, button);
                 DataSet dataset_AfterDeleting = server.getDataBase("NguonCungCap");
@@ -98,7 +98,7 @@ namespace QuanliLKDT
         {
             if (button == "Add")
             {
-                client = new ObjSupplier(txtCodeSupplier.Text, txtName.Text, txtNote.Text);
+                client = new ObjSupplier(txtSupplierCode.Text, txtName.Text, txtNote.Text);
                 server = new LogicSupplier();
                 DataSet dataset_Check = server.getDataBase(client);
                 if (dataset_Check.Tables[0].Rows.Count > 0)
@@ -117,7 +117,7 @@ namespace QuanliLKDT
 
             if (button == "Edit")
             {
-                client_edited = new ObjSupplier(txtCodeSupplier.Text, txtName.Text, txtNote.Text);
+                client_edited = new ObjSupplier(txtSupplierCode.Text, txtName.Text, txtNote.Text);
                 server = new LogicSupplier();
                 server.editDataBase(client, client_edited);
                 DataSet dataset_edit = server.getDataBase("NguonCungCap");
@@ -157,7 +157,7 @@ namespace QuanliLKDT
 
         private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtCodeSupplier.Text = dataGridView.CurrentRow.Cells[0].Value.ToString();
+            txtSupplierCode.Text = dataGridView.CurrentRow.Cells[0].Value.ToString();
             txtName.Text = dataGridView.CurrentRow.Cells[1].Value.ToString();
             txtNote.Text = dataGridView.CurrentRow.Cells[2].Value.ToString();
         }

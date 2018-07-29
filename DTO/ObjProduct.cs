@@ -12,21 +12,21 @@ namespace DTO
 {
     public class ObjProduct
     {
-        string codeproduct, codetype, codeprovider, name, importprice, saleprice, unit;
+        string productcode, typecode, providercode, name, importprice, saleprice, unit;
 
-        public string Codeproduct { get => codeproduct; set => codeproduct = value; }
-        public string Codetype { get => codetype; set => codetype = value; }
-        public string Codeprovider { get => codeprovider; set => codeprovider = value; }
+        public string Productcode { get => productcode; set => productcode = value; }
+        public string Typecode { get => typecode; set => typecode = value; }
+        public string Providercode { get => providercode; set => providercode = value; }
         public string Name { get => name; set => name = value; }
         public string Importprice { get => importprice; set => importprice = value; }
         public string Saleprice { get => saleprice; set => saleprice = value; }
         public string Unit { get => unit; set => unit = value; }
-
+        
         public ObjProduct(string a, string b, string c, string d, string e, string f, string g)
         {
-            Codeproduct = Regex.Replace(a, " ", "");
-            Codetype = Regex.Replace(b, " ", "");
-            Codeprovider = Regex.Replace(c, " ", "");
+            Productcode = Regex.Replace(a, " ", "");
+            Typecode = Regex.Replace(b, " ", "");
+            Providercode = Regex.Replace(c, " ", "");
             Name = d.Trim();
             Importprice = Regex.Replace(e, " ", "");
             Saleprice = Regex.Replace(f, " ", "");

@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProductType));
-            this.txtCodeType = new System.Windows.Forms.TextBox();
+            this.txtTypeCode = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.txtNameType = new System.Windows.Forms.TextBox();
+            this.txtTypeName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
@@ -42,14 +42,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtCodeType
+            // txtTypeCode
             // 
-            this.txtCodeType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCodeType.Location = new System.Drawing.Point(839, 12);
-            this.txtCodeType.Multiline = true;
-            this.txtCodeType.Name = "txtCodeType";
-            this.txtCodeType.Size = new System.Drawing.Size(233, 20);
-            this.txtCodeType.TabIndex = 0;
+            this.txtTypeCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTypeCode.Location = new System.Drawing.Point(839, 12);
+            this.txtTypeCode.Multiline = true;
+            this.txtTypeCode.Name = "txtTypeCode";
+            this.txtTypeCode.Size = new System.Drawing.Size(233, 20);
+            this.txtTypeCode.TabIndex = 0;
             // 
             // label1
             // 
@@ -74,14 +74,14 @@
             this.dataGridView.TabStop = false;
             this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
             // 
-            // txtNameType
+            // txtTypeName
             // 
-            this.txtNameType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNameType.Location = new System.Drawing.Point(839, 53);
-            this.txtNameType.Multiline = true;
-            this.txtNameType.Name = "txtNameType";
-            this.txtNameType.Size = new System.Drawing.Size(233, 20);
-            this.txtNameType.TabIndex = 1;
+            this.txtTypeName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTypeName.Location = new System.Drawing.Point(839, 53);
+            this.txtTypeName.Multiline = true;
+            this.txtTypeName.Name = "txtTypeName";
+            this.txtTypeName.Size = new System.Drawing.Size(233, 20);
+            this.txtTypeName.TabIndex = 1;
             // 
             // label2
             // 
@@ -170,10 +170,10 @@
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtNameType);
+            this.Controls.Add(this.txtTypeName);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtCodeType);
+            this.Controls.Add(this.txtTypeCode);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmProductType";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -187,10 +187,10 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtCodeType;
+        private System.Windows.Forms.TextBox txtTypeCode;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView;
-        private System.Windows.Forms.TextBox txtNameType;
+        private System.Windows.Forms.TextBox txtTypeName;
         private System.Windows.Forms.Label label2;
         private DevExpress.XtraEditors.SimpleButton btnAdd;
         private DevExpress.XtraEditors.SimpleButton btnEdit;

@@ -28,13 +28,13 @@ namespace QuanliLKDT
             {
                 btnAdd.Enabled = btnEdit.Enabled = btnDelete.Enabled = true;
                 btnUpdate.Enabled = false;
-                txtCodeCustomer.Enabled = txtNameCustomer.Enabled = txtPhone.Enabled = txtNote.Enabled = false;
+                txtCustomerCode.Enabled = txtCustomerName.Enabled = txtPhone.Enabled = txtNote.Enabled = false;
             }
             else
             {
                 btnAdd.Enabled = btnEdit.Enabled = btnDelete.Enabled = false;
                 btnUpdate.Enabled = true;
-                txtCodeCustomer.Enabled = txtNameCustomer.Enabled = txtPhone.Enabled = txtNote.Enabled = true;
+                txtCustomerCode.Enabled = txtCustomerName.Enabled = txtPhone.Enabled = txtNote.Enabled = true;
             }
         }
 
@@ -72,7 +72,7 @@ namespace QuanliLKDT
         private void btnAdd_Click(object sender, EventArgs e)
         {
             enable_button(1);
-            txtCodeCustomer.Text = txtNameCustomer.Text = txtPhone.Text = txtNote.Text = " ";
+            txtCustomerCode.Text = txtCustomerName.Text = txtPhone.Text = txtNote.Text = "";
             button = "Add";
         }
 
@@ -81,14 +81,14 @@ namespace QuanliLKDT
         {
             enable_button(1);
             button = "Edit";
-            client = new ObjCustomer(txtCodeCustomer.Text, txtNameCustomer.Text, txtPhone.Text, txtNote.Text);
+            client = new ObjCustomer(txtCustomerCode.Text, txtCustomerName.Text, txtPhone.Text, txtNote.Text);
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             if (button == "Add")
             {
-                client = new ObjCustomer(txtCodeCustomer.Text, txtNameCustomer.Text, txtPhone.Text, txtNote.Text);
+                client = new ObjCustomer(txtCustomerCode.Text, txtCustomerName.Text, txtPhone.Text, txtNote.Text);
                 server = new LogicCustomer();
                 DataSet dataset_Check = server.getDataBase(client);
                 if (dataset_Check.Tables[0].Rows.Count > 0)
@@ -107,7 +107,7 @@ namespace QuanliLKDT
 
             if (button == "Edit")
             {
-                client_edited = new ObjCustomer(txtCodeCustomer.Text, txtNameCustomer.Text, txtPhone.Text, txtNote.Text);
+                client_edited = new ObjCustomer(txtCustomerCode.Text, txtCustomerName.Text, txtPhone.Text, txtNote.Text);
                 server = new LogicCustomer();
                 server.editDataBase(client, client_edited);
                 DataSet dataset_edit = server.getDataBase("KhachHang");
@@ -125,7 +125,7 @@ namespace QuanliLKDT
             button = "Delete";
             if (res == DialogResult.Yes)
             {
-                client = new ObjCustomer(txtCodeCustomer.Text, txtNameCustomer.Text, txtPhone.Text, txtNote.Text);
+                client = new ObjCustomer(txtCustomerCode.Text, txtCustomerName.Text, txtPhone.Text, txtNote.Text);
                 server = new LogicCustomer();
                 server.setDataBase(client, button);
                 DataSet dataset_AfterDeleting = server.getDataBase("KhachHang");
@@ -162,8 +162,8 @@ namespace QuanliLKDT
 
         private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtCodeCustomer.Text = dataGridView.CurrentRow.Cells[0].Value.ToString();
-            txtNameCustomer.Text = dataGridView.CurrentRow.Cells[1].Value.ToString();
+            txtCustomerCode.Text = dataGridView.CurrentRow.Cells[0].Value.ToString();
+            txtCustomerName.Text = dataGridView.CurrentRow.Cells[1].Value.ToString();
             txtPhone.Text = dataGridView.CurrentRow.Cells[2].Value.ToString();
             txtNote.Text = dataGridView.CurrentRow.Cells[3].Value.ToString();
         }

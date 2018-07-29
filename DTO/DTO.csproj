@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ObjCustomer.cs" />
+    <Compile Include="ObjManageRepository.cs" />
     <Compile Include="ObjProduct.cs" />
     <Compile Include="ObjProductType.cs" />
     <Compile Include="ObjSupplier.cs" />

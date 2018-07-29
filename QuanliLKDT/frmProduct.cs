@@ -28,15 +28,15 @@ namespace QuanliLKDT
             {
                 btnAdd.Enabled = btnEdit.Enabled = btnDelete.Enabled = true;
                 btnUpdate.Enabled = false;
-                txtCodeProduct.Enabled = txtCodeType.Enabled = txtCodeProvider.Enabled = false;
-                txtNameProduct.Enabled = txtImportPrice.Enabled = txtSalePrice.Enabled = txtUnit.Enabled = false;
+                txtProductCode.Enabled = txtTypeCode.Enabled = txtProviderCode.Enabled = false;
+                txtProductName.Enabled = txtImportPrice.Enabled = txtSalePrice.Enabled = txtUnit.Enabled = false;
             }
             else
             {
                 btnAdd.Enabled = btnEdit.Enabled = btnDelete.Enabled = false;
                 btnUpdate.Enabled = true;
-                txtCodeProduct.Enabled = txtCodeType.Enabled = txtCodeProvider.Enabled = true;
-                txtNameProduct.Enabled = txtImportPrice.Enabled = txtSalePrice.Enabled = txtUnit.Enabled = true;
+                txtProductCode.Enabled = txtTypeCode.Enabled = txtProviderCode.Enabled = true;
+                txtProductName.Enabled = txtImportPrice.Enabled = txtSalePrice.Enabled = txtUnit.Enabled = true;
             }
         }
 
@@ -78,8 +78,8 @@ namespace QuanliLKDT
         private void btnAdd_Click(object sender, EventArgs e)
         {
             enable_button(1);
-            txtCodeProduct.Text = txtCodeType.Text = txtCodeProvider.Text = " ";
-            txtNameProduct.Text = txtImportPrice.Text = txtSalePrice.Text = txtUnit.Text = " ";
+            txtProductCode.Text = txtTypeCode.Text = txtProviderCode.Text = "";
+            txtProductName.Text = txtImportPrice.Text = txtSalePrice.Text = txtUnit.Text = "";
             button = "Add";
         }
 
@@ -87,7 +87,7 @@ namespace QuanliLKDT
         {
             enable_button(1);
             button = "Edit";
-            client = new ObjProduct(txtCodeProduct.Text, txtCodeType.Text, txtCodeProvider.Text, txtNameProduct.Text, txtImportPrice.Text, txtSalePrice.Text, txtUnit.Text);
+            client = new ObjProduct(txtProductCode.Text, txtTypeCode.Text, txtProviderCode.Text, txtProductName.Text, txtImportPrice.Text, txtSalePrice.Text, txtUnit.Text);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -96,7 +96,7 @@ namespace QuanliLKDT
             button = "Delete";
             if (res == DialogResult.Yes)
             {
-                client = new ObjProduct(txtCodeProduct.Text, txtCodeType.Text, txtCodeProvider.Text, txtNameProduct.Text, txtImportPrice.Text, txtSalePrice.Text, txtUnit.Text);
+                client = new ObjProduct(txtProductCode.Text, txtTypeCode.Text, txtProviderCode.Text, txtProductName.Text, txtImportPrice.Text, txtSalePrice.Text, txtUnit.Text);
                 server = new LogicProduct();
                 server.setDataBase(client, button);
                 DataSet dataset_AfterDeleting = server.getDataBase("SanPham");
@@ -109,7 +109,7 @@ namespace QuanliLKDT
         {
             if (button == "Add")
             {
-                client = new ObjProduct(txtCodeProduct.Text, txtCodeType.Text, txtCodeProvider.Text, txtNameProduct.Text, txtImportPrice.Text, txtSalePrice.Text, txtUnit.Text);
+                client = new ObjProduct(txtProductCode.Text, txtTypeCode.Text, txtProviderCode.Text, txtProductName.Text, txtImportPrice.Text, txtSalePrice.Text, txtUnit.Text);
                 server = new LogicProduct();
                 DataSet dataset_Check = server.getDataBase(client);
  
@@ -129,7 +129,7 @@ namespace QuanliLKDT
 
             if (button == "Edit")
             {
-                client_edited = new ObjProduct(txtCodeProduct.Text, txtCodeType.Text, txtCodeProvider.Text, txtNameProduct.Text, txtImportPrice.Text, txtSalePrice.Text, txtUnit.Text);
+                client_edited = new ObjProduct(txtProductCode.Text, txtTypeCode.Text, txtProviderCode.Text, txtProductName.Text, txtImportPrice.Text, txtSalePrice.Text, txtUnit.Text);
                 server = new LogicProduct();
                 server.editDataBase(client, client_edited);
                 DataSet dataset_edit = server.getDataBase("SanPham");
@@ -169,10 +169,10 @@ namespace QuanliLKDT
 
         private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtCodeProduct.Text = dataGridView.CurrentRow.Cells[0].Value.ToString();
-            txtCodeType.Text = dataGridView.CurrentRow.Cells[1].Value.ToString();
-            txtCodeProvider.Text = dataGridView.CurrentRow.Cells[2].Value.ToString();
-            txtNameProduct.Text = dataGridView.CurrentRow.Cells[3].Value.ToString();
+            txtProductCode.Text = dataGridView.CurrentRow.Cells[0].Value.ToString();
+            txtTypeCode.Text = dataGridView.CurrentRow.Cells[1].Value.ToString();
+            txtProviderCode.Text = dataGridView.CurrentRow.Cells[2].Value.ToString();
+            txtProductName.Text = dataGridView.CurrentRow.Cells[3].Value.ToString();
             txtImportPrice.Text = dataGridView.CurrentRow.Cells[4].Value.ToString();
             txtSalePrice.Text = dataGridView.CurrentRow.Cells[5].Value.ToString();
             txtUnit.Text = dataGridView.CurrentRow.Cells[6].Value.ToString();

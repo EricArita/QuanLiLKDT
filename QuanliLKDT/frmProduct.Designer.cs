@@ -35,14 +35,14 @@
             this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtCodeType = new System.Windows.Forms.TextBox();
+            this.txtTypeCode = new System.Windows.Forms.TextBox();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtCodeProduct = new System.Windows.Forms.TextBox();
+            this.txtProductCode = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtNameProduct = new System.Windows.Forms.TextBox();
+            this.txtProductName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtCodeProvider = new System.Windows.Forms.TextBox();
+            this.txtProviderCode = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtImportPrice = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -128,14 +128,14 @@
             this.label2.Text = "Mã loại";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtCodeType
+            // txtTypeCode
             // 
-            this.txtCodeType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCodeType.Location = new System.Drawing.Point(872, 53);
-            this.txtCodeType.Multiline = true;
-            this.txtCodeType.Name = "txtCodeType";
-            this.txtCodeType.Size = new System.Drawing.Size(202, 20);
-            this.txtCodeType.TabIndex = 1;
+            this.txtTypeCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTypeCode.Location = new System.Drawing.Point(872, 53);
+            this.txtTypeCode.Multiline = true;
+            this.txtTypeCode.Name = "txtTypeCode";
+            this.txtTypeCode.Size = new System.Drawing.Size(202, 20);
+            this.txtTypeCode.TabIndex = 1;
             // 
             // dataGridView
             // 
@@ -160,14 +160,14 @@
             this.label1.Text = "Mã sản phẩm";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtCodeProduct
+            // txtProductCode
             // 
-            this.txtCodeProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCodeProduct.Location = new System.Drawing.Point(872, 15);
-            this.txtCodeProduct.Multiline = true;
-            this.txtCodeProduct.Name = "txtCodeProduct";
-            this.txtCodeProduct.Size = new System.Drawing.Size(202, 20);
-            this.txtCodeProduct.TabIndex = 0;
+            this.txtProductCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtProductCode.Location = new System.Drawing.Point(872, 15);
+            this.txtProductCode.Multiline = true;
+            this.txtProductCode.Name = "txtProductCode";
+            this.txtProductCode.Size = new System.Drawing.Size(202, 20);
+            this.txtProductCode.TabIndex = 0;
             // 
             // label3
             // 
@@ -180,14 +180,14 @@
             this.label3.Text = "Tên sản phẩm";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // txtNameProduct
+            // txtProductName
             // 
-            this.txtNameProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNameProduct.Location = new System.Drawing.Point(872, 132);
-            this.txtNameProduct.Multiline = true;
-            this.txtNameProduct.Name = "txtNameProduct";
-            this.txtNameProduct.Size = new System.Drawing.Size(202, 20);
-            this.txtNameProduct.TabIndex = 3;
+            this.txtProductName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtProductName.Location = new System.Drawing.Point(872, 132);
+            this.txtProductName.Multiline = true;
+            this.txtProductName.Name = "txtProductName";
+            this.txtProductName.Size = new System.Drawing.Size(202, 20);
+            this.txtProductName.TabIndex = 3;
             // 
             // label4
             // 
@@ -200,14 +200,14 @@
             this.label4.Text = " Mã nguồn";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtCodeProvider
+            // txtProviderCode
             // 
-            this.txtCodeProvider.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCodeProvider.Location = new System.Drawing.Point(872, 91);
-            this.txtCodeProvider.Multiline = true;
-            this.txtCodeProvider.Name = "txtCodeProvider";
-            this.txtCodeProvider.Size = new System.Drawing.Size(202, 20);
-            this.txtCodeProvider.TabIndex = 2;
+            this.txtProviderCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtProviderCode.Location = new System.Drawing.Point(872, 91);
+            this.txtProviderCode.Multiline = true;
+            this.txtProviderCode.Name = "txtProviderCode";
+            this.txtProviderCode.Size = new System.Drawing.Size(202, 20);
+            this.txtProviderCode.TabIndex = 2;
             // 
             // label5
             // 
@@ -281,19 +281,19 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtImportPrice);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtCodeProvider);
+            this.Controls.Add(this.txtProviderCode);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtNameProduct);
+            this.Controls.Add(this.txtProductName);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtCodeType);
+            this.Controls.Add(this.txtTypeCode);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtCodeProduct);
+            this.Controls.Add(this.txtProductCode);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -313,14 +313,14 @@
         private DevExpress.XtraEditors.SimpleButton btnEdit;
         private DevExpress.XtraEditors.SimpleButton btnAdd;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtCodeType;
+        private System.Windows.Forms.TextBox txtTypeCode;
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtCodeProduct;
+        private System.Windows.Forms.TextBox txtProductCode;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtNameProduct;
+        private System.Windows.Forms.TextBox txtProductName;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtCodeProvider;
+        private System.Windows.Forms.TextBox txtProviderCode;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtImportPrice;
         private System.Windows.Forms.Label label6;

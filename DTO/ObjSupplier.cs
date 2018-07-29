@@ -8,15 +8,15 @@ namespace DTO
 {
     public class ObjSupplier
     {
-        string codesupplier, name, note;
+        string suppliercode, name, note;
 
-        public string Codesupplier { get => codesupplier; set => codesupplier = value; }
+        public string Suppliercode { get => suppliercode; set => suppliercode = value; }
         public string Name { get => name; set => name = value; }
         public string Note { get => note; set => note = value; }
-
+       
         public ObjSupplier(string a, string b, string c)
         {
-            Codesupplier = a.Trim();
+            Suppliercode = a.Trim();
             Name = b.Trim();
             Note = c.Trim();
         }

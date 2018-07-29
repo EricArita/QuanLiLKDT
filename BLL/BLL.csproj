@@ -52,6 +52,7 @@
     <Compile Include="LogicProduct.cs" />
     <Compile Include="LogicProductType.cs" />
     <Compile Include="LogicSupplier.cs" />
+    <Compile Include="LogicManageRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

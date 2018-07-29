@@ -38,10 +38,10 @@
             this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtNameCustomer = new System.Windows.Forms.TextBox();
+            this.txtCustomerName = new System.Windows.Forms.TextBox();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtCodeCustomer = new System.Windows.Forms.TextBox();
+            this.txtCustomerCode = new System.Windows.Forms.TextBox();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
@@ -149,14 +149,14 @@
             this.label2.Text = "Tên khách hàng";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtNameCustomer
+            // txtCustomerName
             // 
-            this.txtNameCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNameCustomer.Location = new System.Drawing.Point(886, 53);
-            this.txtNameCustomer.Multiline = true;
-            this.txtNameCustomer.Name = "txtNameCustomer";
-            this.txtNameCustomer.Size = new System.Drawing.Size(185, 20);
-            this.txtNameCustomer.TabIndex = 1;
+            this.txtCustomerName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCustomerName.Location = new System.Drawing.Point(886, 53);
+            this.txtCustomerName.Multiline = true;
+            this.txtCustomerName.Name = "txtCustomerName";
+            this.txtCustomerName.Size = new System.Drawing.Size(185, 20);
+            this.txtCustomerName.TabIndex = 1;
             // 
             // dataGridView
             // 
@@ -181,14 +181,14 @@
             this.label1.Text = "Mã khách hàng";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtCodeCustomer
+            // txtCustomerCode
             // 
-            this.txtCodeCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCodeCustomer.Location = new System.Drawing.Point(886, 15);
-            this.txtCodeCustomer.Multiline = true;
-            this.txtCodeCustomer.Name = "txtCodeCustomer";
-            this.txtCodeCustomer.Size = new System.Drawing.Size(185, 20);
-            this.txtCodeCustomer.TabIndex = 0;
+            this.txtCustomerCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCustomerCode.Location = new System.Drawing.Point(886, 15);
+            this.txtCustomerCode.Multiline = true;
+            this.txtCustomerCode.Name = "txtCustomerCode";
+            this.txtCustomerCode.Size = new System.Drawing.Size(185, 20);
+            this.txtCustomerCode.TabIndex = 0;
             // 
             // btnCancel
             // 
@@ -219,10 +219,10 @@
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtNameCustomer);
+            this.Controls.Add(this.txtCustomerName);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtCodeCustomer);
+            this.Controls.Add(this.txtCustomerCode);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -244,10 +244,10 @@
         private DevExpress.XtraEditors.SimpleButton btnEdit;
         private DevExpress.XtraEditors.SimpleButton btnAdd;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtNameCustomer;
+        private System.Windows.Forms.TextBox txtCustomerName;
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtCodeCustomer;
+        private System.Windows.Forms.TextBox txtCustomerCode;
         private DevExpress.XtraEditors.SimpleButton btnCancel;
     }
 }
