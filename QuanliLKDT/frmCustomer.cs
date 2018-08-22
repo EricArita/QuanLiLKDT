@@ -76,7 +76,6 @@ namespace QuanliLKDT
             button = "Add";
         }
 
-
         private void btnEdit_Click(object sender, EventArgs e)
         {
             enable_button(1);
@@ -118,7 +117,6 @@ namespace QuanliLKDT
             }
         }
 
-
         private void btnDelete_Click(object sender, EventArgs e)
         {
             DialogResult res = MessageBox.Show("Bạn có chắc muốn xóa loại sản phẩm này?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -150,7 +148,7 @@ namespace QuanliLKDT
                 {
                       foreach (XtraTabPage tab in f.xtraTabControl_Function.TabPages)
                       {
-                           if (tab.Name == this.Name)
+                           if (tab.Name == "tabCustomer")
                            {
                                 f.xtraTabControl_Function.TabPages.Remove(tab);
                                 return;

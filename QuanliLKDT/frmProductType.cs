@@ -91,7 +91,6 @@ namespace QuanliLKDT
             }
         }
 
-
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             if (button == "Add")
@@ -143,7 +142,7 @@ namespace QuanliLKDT
                 {
                     foreach (XtraTabPage tab in f.xtraTabControl_Function.TabPages)
                     {
-                        if (tab.Name == this.Name)
+                        if (tab.Name == "tabProductType")
                         {
                             f.xtraTabControl_Function.TabPages.Remove(tab);
                             return;

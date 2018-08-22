@@ -32,7 +32,6 @@ namespace DAL
         string path_connect = @"Data Source=DESKTOP-RNV8JUS\SQLEXPRESS;Initial Catalog=QLLinhKienDT;Integrated Security=True";
         DataSet ds = new DataSet();
 
-
         public DataSet getData(string sql)
         {
             try
@@ -45,7 +44,7 @@ namespace DAL
                 conn.Close();
                 return ds;
             }
-            catch (Exception )
+            catch
             {
                 return null;
             }
@@ -70,9 +69,7 @@ namespace DAL
             {
                 conn.Close();
             }
-
         }
-
     }
 }
 

@@ -24,14 +24,16 @@ namespace BLL
         public void setDataBase(ObjProduct client, string button)
         {
             if (button == "Add")
-            {
-                bool ok = Connection.Instance.setData("INSERT INTO" + nameOfTable + "VALUES('" + client.Productcode + "', '" + client.Typecode + "', '" + client.Providercode + "', N'" + client.Name + "', " + client.Importprice + ", " + client.Saleprice + ", N'" + client.Unit + "');");              
-     
+            {              
+                bool ok = Connection.Instance.setData("INSERT INTO" + nameOfTable + "VALUES('" + client.Productcode + "', '" + client.Typecode + "', '" + client.Providercode + "', N'" + client.Name + "', " + client.Importprice + ", " + client.Saleprice + ", N'" + client.Unit + "');");
+                
+                // bool ok = Connection.Instance.setData("EXEC handleContraintError '" + client.Productcode + "', '" + client.Typecode + "', '" + client.Providercode + "', N'" + client.Name + "', " + client.Importprice + ", " + client.Saleprice + ", N'" + client.Unit + "'");
                 if (ok)
                     MessageBox.Show("Thêm thông tin thành công", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else
                     MessageBox.Show("Thêm thông tin thất bại", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                
+                return;              
             }
 
             if (button == "Delete")

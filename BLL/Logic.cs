@@ -7,16 +7,24 @@ using System.Data;
 using System.Data.Sql;
 using System.Data.SqlClient;
 using DAL;
+using DTO;
 
 namespace BLL
 {
-    public class Logic
-    {
-        public DataSet getDataBase(string TableName)
+    public abstract class Logic
+    {      
+       public DataSet getDataBase(string NameOfTable)
         {
-            return Connection.Instance.getData("SELECT * FROM " + TableName);
+           switch (NameOfTable)
+            {
+                case "KhoHangTon":
+                    return Connection.Instance.getData("EXEC TaoBangHangTonKho;");
+                default:
+                    return Connection.Instance.getData("SELECT * FROM " + NameOfTable);
+                    
+            }
+           
         }
-
     }
 }
 

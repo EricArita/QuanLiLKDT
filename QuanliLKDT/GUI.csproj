@@ -76,6 +76,12 @@
     <Compile Include="frmManageRepository_1.Designer.cs">
       <DependentUpon>frmManageRepository_1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmManageRepository_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManageRepository_2.Designer.cs">
+      <DependentUpon>frmManageRepository_2.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmManageRepository_1.resx">
       <DependentUpon>frmManageRepository_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManageRepository_2.resx">
+      <DependentUpon>frmManageRepository_2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProduct.resx">
       <DependentUpon>frmProduct.cs</DependentUpon>

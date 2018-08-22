@@ -25,7 +25,7 @@ namespace BLL
         {
             if (button == "Add")
             {
-                bool ok = Connection.Instance.setData("INSERT INTO" + nameOfTable + "VALUES('" + client.Productcode + "', N'" + client.Productname + "', '" + client.Suppliercode + "', '" + client.Date + "', N'" + client.Status + "', '" + client.Amount + "', '" + client.Note + "');");
+                bool ok = Connection.Instance.setData("INSERT INTO" + nameOfTable + "VALUES('" + client.Productcode + "', N'" + client.Productname + "', '" + client.Suppliercode + "', N'" + client.Suppliername + "', '" + client.Date + "', N'" + client.Status + "', '" + client.Amount + "', '" + client.Note + "');");
 
                 if (ok)
                     MessageBox.Show("Thêm thông tin thành công", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -35,8 +35,10 @@ namespace BLL
             }
 
            if (button == "Delete")
-            {               
-                Connection.Instance.setData("DELETE FROM" + nameOfTable + "WHERE IDKho = '" + ID + "'");
+            {
+                Connection.Instance.setData("DELETE FROM" + nameOfTable + "WHERE IDKho = '" + ID 
+                                            + "'; EXEC SortID;");
+                                           
                 return;
             }
         }

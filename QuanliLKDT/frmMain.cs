@@ -11,15 +11,18 @@ using DevExpress.XtraTab.ViewInfo;
 
 namespace QuanliLKDT
 {
+    public delegate void Processor1();
+    public delegate void Processor2(string data1, string data2, string data3, int data4, string data5);
+
     public partial class frmMain : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         public frmMain()
         {
             InitializeComponent();
         }
-
+    
         static FormCollection frmCollection = Application.OpenForms;
-
+        
         private void frmMain_SizeChanged(object sender, EventArgs e)
         {
             foreach (Form f in frmCollection)
@@ -48,13 +51,12 @@ namespace QuanliLKDT
                                     
             XtraTabPage tab = new XtraTabPage();
             tab.Text = frm.Text;
-            tab.Name = frm.Name;
+            tab.Name = "tab" + frm.Name.Substring(3);
             frm.TopLevel = false;
             frm.Size = xtraTabControl_Function.Size;
             tab.Controls.Add(frm);
             xtraTabControl_Function.TabPages.Add(tab);
-            xtraTabControl_Function.SelectedTabPage = tab;
-                    
+            xtraTabControl_Function.SelectedTabPage = tab;                   
         }
 
         private void focusOnTab(Form frm)
@@ -137,19 +139,27 @@ namespace QuanliLKDT
 
         private void barbtnImport_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Form frm = checkForm(typeof(frmManageRepository_1));
+            Form frm1 = checkForm(typeof(frmManageRepository_1));
+            Form frm2 = checkForm(typeof(frmManageRepository_2));
 
-            if (frm == null)
+            if (frm1 == null && frm2 == null)
             {
-                frmManageRepository_1 f = new frmManageRepository_1();
-                addTab(f);
-                f.Show();
+                frmManageRepository_1 f1 = new frmManageRepository_1();
+                frmManageRepository_2 f2 = new frmManageRepository_2();
+                f1.ClosingFormPort = f2.closeForm;
+                f1.DataTransmissionPort = f2.updateDataGridview;
+                addTab(f1);
+                addTab(f2);
+                focusOnTab(f1);
+                f1.Show();
+                f2.Show();
+                return;
             }
-            else
-            {
-                focusOnTab(frm);
-                frm.Activate();
-            }
+
+            focusOnTab(frm2);
+            focusOnTab(frm1);
+            frm1.Activate();
+            frm2.Activate();
         }
 
         private void xtraTabControl_Function_CloseButtonClick(object sender, EventArgs e)

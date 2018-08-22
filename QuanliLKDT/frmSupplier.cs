@@ -145,7 +145,7 @@ namespace QuanliLKDT
                 {
                     foreach (XtraTabPage tab in f.xtraTabControl_Function.TabPages)
                     {
-                        if (tab.Name == this.Name)
+                        if (tab.Name == "tabSupplier")
                         {
                             f.xtraTabControl_Function.TabPages.Remove(tab);
                             return;
@@ -161,6 +161,5 @@ namespace QuanliLKDT
             txtName.Text = dataGridView.CurrentRow.Cells[1].Value.ToString();
             txtNote.Text = dataGridView.CurrentRow.Cells[2].Value.ToString();
         }
-
     }
 }
