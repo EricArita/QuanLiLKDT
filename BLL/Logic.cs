@@ -20,8 +20,7 @@ namespace BLL
                 case "KhoHangTon":
                     return Connection.Instance.getData("EXEC TaoBangHangTonKho;");
                 default:
-                    return Connection.Instance.getData("SELECT * FROM " + NameOfTable);
-                    
+                    return Connection.Instance.getData("SELECT * FROM " + NameOfTable);                   
             }
            
         }

@@ -39,8 +39,8 @@
             this.barbtnSale = new DevExpress.XtraBars.BarButtonItem();
             this.barbtnStatistics = new DevExpress.XtraBars.BarButtonItem();
             this.barbtnFinacialReport = new DevExpress.XtraBars.BarButtonItem();
-            this.barbtnImportReport = new DevExpress.XtraBars.BarButtonItem();
-            this.barbtnSaleReport = new DevExpress.XtraBars.BarButtonItem();
+            this.barbtnImportProductReport = new DevExpress.XtraBars.BarButtonItem();
+            this.barbtnExportProductReport = new DevExpress.XtraBars.BarButtonItem();
             this.barbtnStaffReport = new DevExpress.XtraBars.BarButtonItem();
             this.barbtnManageReceipt = new DevExpress.XtraBars.BarButtonItem();
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
@@ -76,8 +76,8 @@
             this.barbtnSale,
             this.barbtnStatistics,
             this.barbtnFinacialReport,
-            this.barbtnImportReport,
-            this.barbtnSaleReport,
+            this.barbtnImportProductReport,
+            this.barbtnExportProductReport,
             this.barbtnStaffReport,
             this.barbtnManageReceipt});
             this.ribbonControl1.LargeImages = this.imageCollection1;
@@ -156,19 +156,20 @@
             this.barbtnFinacialReport.ImageOptions.LargeImageIndex = 11;
             this.barbtnFinacialReport.Name = "barbtnFinacialReport";
             // 
-            // barbtnImportReport
+            // barbtnImportProductReport
             // 
-            this.barbtnImportReport.Caption = "Báo cáo sản phẩm nhập";
-            this.barbtnImportReport.Id = 18;
-            this.barbtnImportReport.ImageOptions.LargeImageIndex = 8;
-            this.barbtnImportReport.Name = "barbtnImportReport";
+            this.barbtnImportProductReport.Caption = "Báo cáo sản phẩm nhập";
+            this.barbtnImportProductReport.Id = 18;
+            this.barbtnImportProductReport.ImageOptions.LargeImageIndex = 8;
+            this.barbtnImportProductReport.Name = "barbtnImportProductReport";
+            this.barbtnImportProductReport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barbtnImportReport_ItemClick);
             // 
-            // barbtnSaleReport
+            // barbtnExportProductReport
             // 
-            this.barbtnSaleReport.Caption = "Báo cáo sản phẩm bán";
-            this.barbtnSaleReport.Id = 19;
-            this.barbtnSaleReport.ImageOptions.LargeImageIndex = 9;
-            this.barbtnSaleReport.Name = "barbtnSaleReport";
+            this.barbtnExportProductReport.Caption = "Báo cáo sản phẩm bán";
+            this.barbtnExportProductReport.Id = 19;
+            this.barbtnExportProductReport.ImageOptions.LargeImageIndex = 9;
+            this.barbtnExportProductReport.Name = "barbtnExportProductReport";
             // 
             // barbtnStaffReport
             // 
@@ -249,8 +250,8 @@
             // 
             this.ribbonPageGroup6.ItemLinks.Add(this.barbtnStatistics);
             this.ribbonPageGroup6.ItemLinks.Add(this.barbtnFinacialReport);
-            this.ribbonPageGroup6.ItemLinks.Add(this.barbtnImportReport);
-            this.ribbonPageGroup6.ItemLinks.Add(this.barbtnSaleReport);
+            this.ribbonPageGroup6.ItemLinks.Add(this.barbtnImportProductReport);
+            this.ribbonPageGroup6.ItemLinks.Add(this.barbtnExportProductReport);
             this.ribbonPageGroup6.ItemLinks.Add(this.barbtnStaffReport);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             this.ribbonPageGroup6.Text = "Thống kê - Báo cáo";
@@ -347,8 +348,8 @@
         private DevExpress.XtraBars.BarButtonItem barbtnSale;
         private DevExpress.XtraBars.BarButtonItem barbtnStatistics;
         private DevExpress.XtraBars.BarButtonItem barbtnFinacialReport;
-        private DevExpress.XtraBars.BarButtonItem barbtnImportReport;
-        private DevExpress.XtraBars.BarButtonItem barbtnSaleReport;
+        private DevExpress.XtraBars.BarButtonItem barbtnImportProductReport;
+        private DevExpress.XtraBars.BarButtonItem barbtnExportProductReport;
         private DevExpress.XtraBars.BarButtonItem barbtnStaffReport;
         private DevExpress.XtraBars.BarButtonItem barbtnManageReceipt;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;

@@ -60,9 +60,21 @@ namespace DAL
                 cmd.ExecuteNonQuery();
                 return true;
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                MessageBox.Show(e.Message);
+                /*if (ex.Errors.Count > 0) 
+                {
+                    switch (ex.Errors[0].Number)
+                    {
+                        case 547: // Code of foreign key violation
+                            MessageBox.Show("Lỗi khóa ngoại nè .");
+                            break;                          
+                        case 2601: // Code of primary key violation
+                            MessageBox.Show("Lỗi khóa chính nè .");
+                            break;                      
+                    }
+                }*/
+                MessageBox.Show(ex.Message);
                 return false;
             }
             finally

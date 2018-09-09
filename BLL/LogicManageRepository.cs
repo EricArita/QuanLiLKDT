@@ -30,7 +30,7 @@ namespace BLL
                 if (ok)
                     MessageBox.Show("Thêm thông tin thành công", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else
-                    MessageBox.Show("Thêm thông tin thất bại", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Danh mục sản phẩm chưa tồn tại mã sản phẩm này hoặc danh mục nguồn cung cấp chưa tồn tại mã nguồn này! Vui lòng cập nhật các thông tin trên trước khi thêm sản phẩm ! ", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 

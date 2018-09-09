@@ -86,8 +86,8 @@ namespace QuanliLKDT
         private void btnAdd_Click(object sender, EventArgs e)
         {
             enable_button(1);
-            txtProductCode.Text = txtProductName.Text = txtSupplierCode.Text = txtNote.Text = txtAmount.Text = txtStatus.Text = "";
-            txtDate.Text = DateTime.Today.ToString("dd/MM/yyyy");
+            txtProductCode.Text = txtProductName.Text = txtSupplierCode.Text = txtSupplierName.Text = txtNote.Text = txtAmount.Text = txtStatus.Text = "";
+            txtDate.Text = DateTime.Now.ToString("dd/MM/yyy HH:mm");
             button = "Add";
         }
 
@@ -182,7 +182,7 @@ namespace QuanliLKDT
         {
             if (button == "Add")
             {
-                client = new ObjManageRepository(txtProductCode.Text, txtProductName.Text, txtSupplierCode.Text, txtSupplierName.Text, txtDate.Text, txtStatus.Text, txtAmount.Text, txtNote.Text);
+                client = new ObjManageRepository(txtProductCode.Text, txtProductName.Text, txtSupplierCode.Text, txtSupplierName.Text, DateTime.Now.ToString("yyyyMMdd HH:mm"), txtStatus.Text, txtAmount.Text, txtNote.Text);
                 handleProductData(client, null);
 
                 if (String.Compare(txtStatus.Text, "Xuất", true) == 0)

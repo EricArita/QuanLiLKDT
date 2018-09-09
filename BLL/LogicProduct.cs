@@ -26,12 +26,11 @@ namespace BLL
             if (button == "Add")
             {              
                 bool ok = Connection.Instance.setData("INSERT INTO" + nameOfTable + "VALUES('" + client.Productcode + "', '" + client.Typecode + "', '" + client.Providercode + "', N'" + client.Name + "', " + client.Importprice + ", " + client.Saleprice + ", N'" + client.Unit + "');");
-                
-                // bool ok = Connection.Instance.setData("EXEC handleContraintError '" + client.Productcode + "', '" + client.Typecode + "', '" + client.Providercode + "', N'" + client.Name + "', " + client.Importprice + ", " + client.Saleprice + ", N'" + client.Unit + "'");
+                               
                 if (ok)
                     MessageBox.Show("Thêm thông tin thành công", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else
-                    MessageBox.Show("Thêm thông tin thất bại", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Danh mục loại sản phẩm chưa tồn tại mã loại này hoặc danh mục nguồn cung cấp chưa tồn tại mã nguồn này! Vui lòng cập nhật các thông tin trên trước khi thêm sản phẩm ! ", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 
                 return;              
             }

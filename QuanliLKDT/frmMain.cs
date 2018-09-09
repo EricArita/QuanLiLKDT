@@ -167,5 +167,22 @@ namespace QuanliLKDT
             ClosePageButtonEventArgs arg = e as ClosePageButtonEventArgs;
             (arg.Page as XtraTabPage).PageVisible = false;
         }
+
+        private void barbtnImportReport_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = checkForm(typeof(frmImportProductReport));
+
+            if (frm == null)
+            {
+                frmImportProductReport f = new frmImportProductReport();
+                addTab(f);
+                f.Show();
+            }
+            else
+            {
+                focusOnTab(frm);
+                frm.Activate();
+            }
+        }
     }
 }
