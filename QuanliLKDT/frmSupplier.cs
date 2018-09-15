@@ -64,7 +64,6 @@ namespace QuanliLKDT
             dataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.SkyBlue;
             dataGridView.RowsDefaultCellStyle.BackColor = Color.WhiteSmoke;
             dataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.LightCyan;
-            this.reportViewer1.RefreshReport();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
