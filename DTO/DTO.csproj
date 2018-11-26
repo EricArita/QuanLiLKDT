@@ -59,6 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ObjLogin.cs" />
     <Compile Include="ObjCustomer.cs" />
     <Compile Include="ObjManageRepository.cs" />
     <Compile Include="ObjProduct.cs" />

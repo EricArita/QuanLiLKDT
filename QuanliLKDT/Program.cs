@@ -20,7 +20,7 @@ namespace QuanliLKDT
 
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
-            Application.Run(new frmMain());
+            Application.Run(new frmLogin());
         }
     }
 }

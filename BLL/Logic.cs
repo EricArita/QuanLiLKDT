@@ -14,16 +14,16 @@ namespace BLL
     public abstract class Logic
     {      
        public DataSet getDataBase(string NameOfTable)
-        {
+       {
            switch (NameOfTable)
-            {
+           {
                 case "KhoHangTon":
                     return Connection.Instance.getData("EXEC TaoBangHangTonKho;");
                 default:
                     return Connection.Instance.getData("SELECT * FROM " + NameOfTable);                   
-            }
+           }
            
-        }
+       }
     }
 }
 
