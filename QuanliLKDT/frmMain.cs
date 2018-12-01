@@ -8,6 +8,8 @@ using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraTab;
 using DevExpress.XtraTab.ViewInfo;
+using DevExpress.XtraBars;
+using DevExpress.XtraBars.Ribbon;
 
 namespace QuanliLKDT
 {
@@ -16,13 +18,32 @@ namespace QuanliLKDT
 
     public partial class frmMain : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        List<string> detailPermissionList;
+        static FormCollection frmCollection = Application.OpenForms;
+
+        public List<string> DetailPermissionList { get => detailPermissionList; set => detailPermissionList = value; }
+
         public frmMain()
         {
             InitializeComponent();
         }
-    
-        static FormCollection frmCollection = Application.OpenForms;
-        
+ 
+        private void frmMain_Load(object obj, EventArgs e)
+        {
+            RibbonBarItems items = this.ribbonControl1.Items;
+            foreach(string name in DetailPermissionList)
+            {
+                foreach(BarButtonItem button in items)
+                {
+                    if(button.Name == name)
+                    {
+                        button.Enabled = false;
+                        break;
+                    }
+                }
+            }
+        } 
+
         private void frmMain_SizeChanged(object sender, EventArgs e)
         {
             foreach (Form f in frmCollection)
@@ -73,7 +94,7 @@ namespace QuanliLKDT
                 }
             }
         }
-
+        
         private void btnProductType_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Form frm = checkForm(typeof(frmProductType));

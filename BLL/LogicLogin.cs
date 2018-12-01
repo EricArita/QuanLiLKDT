@@ -23,9 +23,27 @@ namespace BLL
             }
             catch
             {
-                MessageBox.Show("Tên đăng nhập hoặc mật khẩu không chính xác");
-                return "-1";
+                return " ";
             }
+        }
+
+        public string getID_Permission(string ID_User)
+        {
+            DataSet dt = Connection.Instance.getData("SELECT MaPhanQuyen FROM PhanQuyen WHERE MaTaiKhoan = '" + ID_User + "';");
+            return dt.Tables[0].Rows[0][0].ToString();
+        }
+
+        public List<string> getDetailPermission(string ID_Permission)
+        {
+            DataSet dt = Connection.Instance.getData("SELECT BtnName FROM ChiTietPhanQuyen WHERE MaPhanQuyen = '" + ID_Permission + "';");
+
+            List<string> container = new List<string>();
+            foreach(DataRow dr in dt.Tables[0].Rows)
+            {
+                container.Add(dr[0].ToString());
+            }
+
+            return container;
         }
     }
 }
